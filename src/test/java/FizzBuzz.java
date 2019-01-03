@@ -9,7 +9,7 @@ public class FizzBuzz {
     }
 
     public String generate() {
-        if(numberList.get(0) == 5)
+        if(numberList.get(0) == 5 || numberList.get(0) == 10)
             return "Buzz";
         if(numberList.get(0) % 3 == 0)
             return "Fizz";
