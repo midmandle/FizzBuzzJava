@@ -17,4 +17,10 @@ public class NumberEvenlyDivisibleByFiveTests {
         List<Integer> numberList = asList(10);
         assertEquals("Buzz", new FizzBuzz(numberList).generate());
     }
+
+    @Test
+    public void twenty_returns_string_buzz() {
+        List<Integer> numberList = asList(20);
+        assertEquals("Buzz", new FizzBuzz(numberList).generate());
+    }
 }
