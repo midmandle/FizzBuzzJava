@@ -19,5 +19,11 @@ public class NumbersEvenlyDivisibleByThreeTests {
         assertEquals("Fizz", new FizzBuzz(numberList).generate());
     }
 
+    @Test
+    public void nine_returns_string_nine() {
+        List<Integer> numberList = asList(9);
+        assertEquals("Fizz", new FizzBuzz(numberList).generate());
+    }
+
 }
 
