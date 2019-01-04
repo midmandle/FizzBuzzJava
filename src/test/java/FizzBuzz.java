@@ -9,12 +9,13 @@ public class FizzBuzz {
     }
 
     public String generate() {
-        if (numberList.get(0) % 3 == 0 && numberList.get(0) % 5 == 0)
+        Integer currentNumber = numberList.get(0);
+        if (currentNumber % 3 == 0 && currentNumber % 5 == 0)
             return "FizzBuzz";
-        if (numberList.get(0) % 5 == 0)
+        if (currentNumber % 5 == 0)
             return "Buzz";
-        if (numberList.get(0) % 3 == 0)
+        if (currentNumber % 3 == 0)
             return "Fizz";
-        return numberList.get(0).toString();
+        return currentNumber.toString();
     }
 }
