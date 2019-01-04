@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class FizzBuzz {
@@ -10,13 +11,21 @@ public class FizzBuzz {
 
     public String generate() {
         Integer currentNumber = numberList.get(0);
-        if (isDivisibleBy3(currentNumber) && isDivisibleBy5(currentNumber))
+        List<String> fizzBuzzList = new ArrayList<String>();
+        if (isDivisibleBy3(currentNumber) && isDivisibleBy5(currentNumber)) {
+            fizzBuzzList.add("FizzBuzz");
             return "FizzBuzz";
-        if (isDivisibleBy5(currentNumber))
+        }
+        if (isDivisibleBy5(currentNumber)) {
+            fizzBuzzList.add("Buzz");
             return "Buzz";
-        if (isDivisibleBy3(currentNumber))
+        }
+        if (isDivisibleBy3(currentNumber)) {
+            fizzBuzzList.add("Fizz");
             return "Fizz";
-        return currentNumber.toString();
+        }
+        fizzBuzzList.add(currentNumber.toString());
+        return fizzBuzzList.get(0);
     }
 
     private boolean isDivisibleBy5(Integer currentNumber) {
