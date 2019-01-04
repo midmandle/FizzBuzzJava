@@ -21,6 +21,7 @@ public class NumbersConvertedToFizzBuzzStringTests {
     private Object[] parameters_for_converts_list_of_numbers_to_csv_string() {
         return new Object[]{
                 new Object[]{"1, 2", asList(1, 2)},
+                new Object[]{"1, 2, Fizz", asList(1, 2, 3)},
         };
     }
 }
