@@ -15,15 +15,15 @@ public class FizzBuzz {
         for (Integer number : numberList) {
             if (isDivisibleBy3(number) && isDivisibleBy5(number)) {
                 fizzBuzzList.add("FizzBuzz");
-                break;
+                continue;
             }
             if (isDivisibleBy5(number)) {
                 fizzBuzzList.add("Buzz");
-                break;
+                continue;
             }
             if (isDivisibleBy3(number)) {
                 fizzBuzzList.add("Fizz");
-                break;
+                continue;
             }
             fizzBuzzList.add(number.toString());
         }

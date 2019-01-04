@@ -22,6 +22,7 @@ public class NumbersConvertedToFizzBuzzStringTests {
         return new Object[]{
                 new Object[]{"1, 2", asList(1, 2)},
                 new Object[]{"1, 2, Fizz", asList(1, 2, 3)},
+                new Object[]{"1, 2, Fizz, 4, Buzz", asList(1, 2, 3, 4, 5)},
         };
     }
 }
