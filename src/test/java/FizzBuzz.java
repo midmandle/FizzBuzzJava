@@ -10,21 +10,21 @@ public class FizzBuzz {
     }
 
     public String generate() {
-        Integer currentNumber = numberList.get(0);
         List<String> fizzBuzzList = new ArrayList<String>();
-        if (isDivisibleBy3(currentNumber) && isDivisibleBy5(currentNumber)) {
-            fizzBuzzList.add("FizzBuzz");
-            return "FizzBuzz";
+
+        for (Integer number : numberList) {
+            if (isDivisibleBy3(number) && isDivisibleBy5(number)) {
+                fizzBuzzList.add("FizzBuzz");
+            }
+            if (isDivisibleBy5(number)) {
+                fizzBuzzList.add("Buzz");
+            }
+            if (isDivisibleBy3(number)) {
+                fizzBuzzList.add("Fizz");
+            }
+            fizzBuzzList.add(number.toString());
         }
-        if (isDivisibleBy5(currentNumber)) {
-            fizzBuzzList.add("Buzz");
-            return "Buzz";
-        }
-        if (isDivisibleBy3(currentNumber)) {
-            fizzBuzzList.add("Fizz");
-            return "Fizz";
-        }
-        fizzBuzzList.add(currentNumber.toString());
+
         return fizzBuzzList.get(0);
     }
 
