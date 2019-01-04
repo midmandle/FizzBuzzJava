@@ -1,20 +1,23 @@
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.List;
 
 import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 
+@RunWith(JUnitParamsRunner.class)
 public class NumberEvenlyDivisibleByThreeAndFiveTests {
     @Test
-    public void fifteen_returns_fizzbuzz() {
-        List<Integer> numberList = asList(15);
+    @Parameters({
+            "15",
+            "30",
+    })
+    public void fifteen_returns_fizzbuzz(int actualNumber) {
+        List<Integer> numberList = asList(actualNumber);
         assertEquals("FizzBuzz", new FizzBuzz(numberList).generate());
     }
 
-    @Test
-    public void thirty_returns_fizzbuzz() {
-        List<Integer> numberList = asList(30);
-        assertEquals("FizzBuzz", new FizzBuzz(numberList).generate());
-    }
 }
