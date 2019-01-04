@@ -14,6 +14,8 @@ public class NumberEvenlyDivisibleByThreeAndFiveTests {
     @Parameters({
             "15",
             "30",
+            "45",
+            "60"
     })
     public void fifteen_returns_fizzbuzz(int actualNumber) {
         List<Integer> numberList = asList(actualNumber);
