@@ -15,17 +15,20 @@ public class FizzBuzz {
         for (Integer number : numberList) {
             if (isDivisibleBy3(number) && isDivisibleBy5(number)) {
                 fizzBuzzList.add("FizzBuzz");
+                break;
             }
             if (isDivisibleBy5(number)) {
                 fizzBuzzList.add("Buzz");
+                break;
             }
             if (isDivisibleBy3(number)) {
                 fizzBuzzList.add("Fizz");
+                break;
             }
             fizzBuzzList.add(number.toString());
         }
 
-        return fizzBuzzList.get(0);
+        return String.join(", ", fizzBuzzList);
     }
 
     private boolean isDivisibleBy5(Integer currentNumber) {
